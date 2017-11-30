@@ -1,0 +1,17 @@
+@import './base';
+@import './color';
+$--color-primary: $color-primary; //主题色
+$--color-success: $color-success; // 表示「成功」的状态色
+$--color-warning: $color-warning; // 表示「警告」的状态色
+$--color-danger: $color-danger; // 表示「危险」的状态色
+$--color-info: $color-info; // 表示「信息」的状态色
+$--color-text-primary: #2D2F33; // 主要文字色
+$--color-text-regular: #5A5E66; // 常规文字色
+$--color-text-secondary: #878D99; // 次要文字色
+$--color-text-placeholder: #B4BCCC; // 占位文字色
+$--border-color-base: #D8DCE5; // 一级边框
+$--border-color-light: #DFE4ED; // 二级边框
+$--border-color-lighter: #E6EBF5; // 三级边框
+$--border-color-extra-light: #EDF2FC; // 四级边框
+$--font-path: '../../../node_modules/element-ui/lib/theme-chalk/fonts';
+@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";

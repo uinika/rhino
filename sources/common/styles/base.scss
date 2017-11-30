@@ -1,0 +1,330 @@
+@import 'color';
+
+/* -----common----- */
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.clean {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.margin-clean {
+  margin: 0;
+}
+
+.padding-clean {
+  padding: 0;
+}
+
+.outline-clean {
+  outline: none;
+}
+
+.border-clean {
+  border: none;
+}
+
+
+/* -----float----- */
+
+.clear-both {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+
+/* -----display----- */
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.display-none {
+  display: none;
+}
+
+
+/* -----text-align----- */
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+
+/* -----vertical-align----- */
+
+.vertical-align-middle {
+  vertical-align: middle;
+}
+
+
+/* -----overflow----- */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+
+/* -----font-size----- */
+
+.font-size-larger {
+  font-size: 20px;
+}
+
+.font-size-large {
+  font-size: 18px;
+}
+
+.font-size-medium {
+  font-size: 16px;
+}
+
+.font-size-small {
+  font-size: 14px;
+}
+
+.font-size-smaller {
+  font-size: 13px;
+}
+
+.font-size-tiny {
+  font-size: 12px;
+}
+
+
+/* -----color----- */
+
+.color-blue {
+  color: $color-blue !important;
+}
+
+.color-blue-light {
+  color: $color-blue-light !important;
+}
+
+.color-blue-dark {
+  color: $color-blue-dark !important;
+}
+
+.color-pink {
+  color: $color-pink !important;
+}
+
+.color-cyan {
+  color: $color-cyan !important;
+}
+
+.color-black {
+  color: $color-black !important;
+}
+
+.color-black-light {
+  color: $color-black-light !important;
+}
+
+.color-black-light-extra {
+  color: $color-black-light-extra !important;
+}
+
+.color-silver {
+  color: $color-silver !important;
+}
+
+.color-silver-light {
+  color: $color-silver-light !important;
+}
+
+.color-silver-light-extra {
+  color: $color-silver-light-extra !important;
+}
+
+.color-gray {
+  color: $color-gray !important;
+}
+
+.color-gray-light {
+  color: $color-gray-light !important;
+}
+
+.color-gray-light-extra {
+  color: $color-gray-light-extra !important;
+}
+
+.color-white {
+  color: $color-white !important;
+}
+
+.color-white-dark {
+  color: $color-white-dark !important;
+}
+
+.color-red {
+  color: $color-red !important;
+}
+
+.color-red-light {
+  color: $color-red-light !important;
+}
+
+.color-primary {
+  color: $color-primary !important;
+}
+
+// Info
+.color-success {
+  color: $color-success !important;
+}
+
+.color-warning {
+  color: $color-warning !important;
+}
+
+.color-danger {
+  color: $color-danger !important;
+}
+
+.color-info {
+  color: $color-info !important;
+}
+
+// Font
+.color-font-primary {
+  color: $color-font-primary !important;
+}
+
+.color-font-regular {
+  color: $color-font-regular !important;
+}
+
+.color-font-secondary {
+  color: $color-font-secondary !important;
+}
+
+.color-font-placeholder {
+  color: $color-font-placeholder !important;
+}
+
+// Border
+.color-border-base {
+  color: $color-border-base !important;
+}
+
+.color-border-light {
+  color: $color-border-light !important;
+}
+
+.color-border-lighter {
+  color: $color-border-lighter !important;
+}
+
+.color-border-light-extra {
+  color: $color-border-light-extra !important;
+}
+
+
+/* -----font weight----- */
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+
+/* ----- width----- */
+
+.width-larger {
+  width: 350px !important;
+}
+
+.width-large {
+  width: 250px !important;
+}
+
+.width-medium {
+  width: 200px !important;
+}
+
+.width-small {
+  width: 150px !important;
+}
+
+.width-smaller {
+  width: 110px !important;
+}
+
+.width-tiny {
+  width: 80px !important;
+}
+
+@for $index from 1 through 100 {
+  .width-#{$index} {
+    width: 1% * $index !important;
+  }
+}
+
+
+/* ----- min width----- */
+
+.min-width-larger {
+  min-width: 350px !important;
+}
+
+.min-width-large {
+  min-width: 250px !important;
+}
+
+.min-width-medium {
+  min-width: 200px !important;
+}
+
+.min-width-small {
+  min-width: 150px !important;
+}
+
+.min-width-smaller {
+  min-width: 110px !important;
+}
+
+.min-width-tiny {
+  min-width: 80px !important;
+}
