@@ -13,10 +13,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
+    extensions: ['.js', '.jsx', '.json'],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -31,7 +28,7 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
     }, {
