@@ -1,6 +1,6 @@
 {
   "name": "Rhino",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "a React 16.2.x & webpack3.x Project.",
   "main": "index.html",
   "repository": {

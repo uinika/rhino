@@ -16,11 +16,11 @@
 5. Open browser http://localhost:8000/wiserv/index.html
 
 ## Thirdparty Library
-* [React 15.6.x](https://facebook.github.io/react/s)
+* [React 16.2.x](https://facebook.github.io/react/s)
 * [Webpack 3.0.x](https://webpack.js.org/)
 * [Mobx 3.1.x](https://mobx.js.org/)
 * [Antd 2.11.x](https://ant.design/)
-* [NodeJS 6.11.x](https://nodejs.org/)
+* [NodeJS 8.9.x](https://nodejs.org/)
 
 ## Transfer Protocol
 
