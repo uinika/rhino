@@ -11,22 +11,22 @@
   "license": "MIT",
   "dependencies": {
     "animate.css": "^3.6.1",
-    "antd": "^3.2.2",
+    "antd": "^3.3.3",
     "axios": "^0.18.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "lodash": "^4.17.5",
     "md5": "^2.2.1",
-    "mobx": "^3.6.1",
-    "mobx-react": "^4.4.2",
-    "moment": "^2.20.1",
+    "mobx": "^4.1.0",
+    "mobx-react": "^5.0.0",
+    "moment": "^2.21.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "rxjs": "^5.5.6",
-    "sha.js": "^2.4.10"
+    "rxjs": "^5.5.7",
+    "sha.js": "^2.4.11"
   },
   "devDependencies": {
     "archiver": "^2.1.1",
