@@ -1,6 +1,6 @@
 {
   "name": "Rhino",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "React, MobX & ES6, Webpack4 so on...",
   "main": "index.html",
   "repository": {
