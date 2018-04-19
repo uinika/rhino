@@ -31,10 +31,10 @@
 
 | HTTP请求方式 | 操作语义 |
 |:-----|:-----|
-| `GET` | 查询（_Query_） |
-| `POST`  | 保存（_Save_） |
-| `PUT` | 修改（_Update_） |
-| `DELETE` | 删除（_Remove_） |
+| `GET` | _Query_ |
+| `POST`  | _Save_ |
+| `PUT` | _Update_ |
+| `DELETE` | _Remove_ |
 
 **GET**：`https://jd.com/user/{{AGE}}`，获取年龄为`age`的用户。
 
