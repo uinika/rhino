@@ -22,38 +22,69 @@
 * [Antd 2.11.x](https://ant.design/)
 * [NodeJS 8.9.x](https://nodejs.org/)
 
-## Transfer Protocol
+## Restful风格接口（Strict Restful Style）
 
-> head
-* status: (Integer)，Server-side status
-  1. 200：Http response success.
-  2. 201：Warning infomation.
-  3. 202：Login timeout.
-  4. 400: Bad request.
-  5. 404: No page found.
-  6. 405: Request method is not support.
-  7. 415: Unsupported media type.
-  8. 500：Server-side exceptions.
-* token: (String)，Encryption key。
-* message: (String)，Server-side infomation for current http request.
-* total: (Integer)，Sum of business logic result (if the results as the object then total equals 1, as an array equals length of the array).
+通过**URL**地址定位服务器提供的资源数据，并使用HTTP动词（GET、POST、DELETE、PUT）描述操作。
 
-> body
-* (Object/Array)，Realistic & available datas.
+| HTTP请求方式 | 操作语义 |
+|:-----|:-----|
+| `GET` | 查询（_Query_） |
+| `POST`  | 保存（_Save_） |
+| `PUT` | 修改（_Update_） |
+| `DELETE` | 删除（_Remove_） |
 
-```javascript
-  {
-    head: {
-      status: 200,
-      token: "ghco9xdnaco31gmafukxchph",
-      message: "Login Success!",
-      total: 1
-    },
-    body: {
-      username: "admin",
-      password: "admin"
-    }
+**GET**：`https://jd.com/user/{{AGE}}`，获取年龄为`age`的用户。
+
+**POST**：`https://jd.com/user`，保存用户，用户信息通过HTTP协议的`payload`传递。
+
+**PUT**：`https://jd.com/user/{{NAME}}`，修改名字为`name`的用户。
+
+**DELETE**：`https://jd.com/user/{{ID}}`，删除标识为`ID`的用户。
+
+## 报文传输协议（Transfer Protocol）
+
+前后端基于[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)进行数据报文的传输。
+
+### 头部（Head）
+
+报文头部信息，携带每次HTTPS通讯状态相关的信息。
+
+**status**：字符串类型，全部使用大写英文字母，用来表示服务器端状态代码。
+
+* `SUCCESS`：Http response success.
+* `WARNING`：Warning infomation.
+* `TIMEOUT`：Login timeout.
+* `BAD`：Bad request.
+* `NONE`：No API founded.
+* `NONSUPPORT`：Request method is not support.
+* `UNSUPPORT`：Unsupported media type.
+* `EXCEPTION`：Server-side exceptions.
+
+**token**：字符串类型，必选参数（_除首次登陆外_），权限密钥。
+
+**message**: 字符串类型，必选参数，当前请求产生的服务器端信息。
+
+**total**: 整型，可选参数，表达所请求数据在数据库当中的总条数，主要用于分页使用。
+
+### 消息体（Body）
+
+对象*Object*或者数组*Array*类型，用于存放真实可用的业务数据，可以为`null`值。
+
+### 模拟报文数据（Mock Data）
+
+```json
+{
+  head: {
+    status: "SUCCESS",
+    message: "Your login has been successful!",
+    token: "xghco9xdnaco31gmafukxchph",
+    total: 1
+  },
+  body: {
+    username: "admin",
+    Parameterword: "admin"
   }
+}
 ```
 
 ## Project Release
