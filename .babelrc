@@ -1,4 +1,8 @@
 {
   "presets": ["env", "stage-2"],
-  "plugins": ["transform-react-jsx", ["import", { "libraryName": "antd", "style": true }]]
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-react-jsx",
+    ["import", { "libraryName": "antd", "style": true }]
+  ]
 }

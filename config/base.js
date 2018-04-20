@@ -1,7 +1,7 @@
 module.exports = {
   client: {
     uri: '/dev',
-    port: '6000',
+    port: '5000',
   },
   server: {
     uri: '/mock',

@@ -1,7 +1,8 @@
 import React from "react";
+import "./style.scss";
 
-export default class Welcome extends React.Component {
+export default class Login extends React.Component {
   render() {
-    return <h1>Hello, World！</h1>;
+    return <h1>Hello, Login !</h1>;
   }
 }
