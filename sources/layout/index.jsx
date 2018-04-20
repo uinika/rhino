@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
-import Dashboard from "../dashboard/index.jsx";
 import { Route, Link, Switch } from "react-router-dom";
+import Loadable from "react-loadable";
 
 export default class Layout extends React.Component {
   render() {
@@ -9,7 +9,13 @@ export default class Layout extends React.Component {
       <div>
         <nav>导航</nav>
         <Switch>
-          <Route path="/dashboard" component={Dashboard} />
+          <Route
+            path="/dashboard"
+            component={Loadable({
+              loader: () => import("../dashboard/index.jsx"),
+              loading: Loading
+            })}
+          />
         </Switch>
       </div>
     );
