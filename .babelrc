@@ -3,6 +3,6 @@
   "plugins": [
     "react-hot-loader/babel",
     "transform-react-jsx",
-    ["import", { "libraryName": "antd", "style": true }]
+    ["import", { "libraryName": "antd" }]
   ]
 }

@@ -1,11 +1,11 @@
 import { Route, Link, Switch } from "react-router-dom";
 import React from "react";
-import Layout from "./layout/index.jsx";
 import Loadable from "react-loadable";
 import Loading from "./common/loading.jsx";
 import "antd/dist/antd.css";
+import { hot } from "react-hot-loader";
 
-export default () => (
+export default hot(module)(() => (
   <div>
     <Switch>
       <Route
@@ -23,7 +23,13 @@ export default () => (
           loading: Loading
         })}
       />
-      <Route path="/layout" component={Layout} />
+      <Route
+        path="/layout"
+        component={Loadable({
+          loader: () => import("./layout/index.jsx"),
+          loading: Loading
+        })}
+      />
     </Switch>
   </div>
-);
+));
