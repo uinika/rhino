@@ -21,29 +21,15 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".json"]
   },
-  optimization: {
-    runtimeChunk: {
-      name: "manifest"
-    },
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: "vendor",
-          chunks: "all"
-        }
-      }
-    }
-  },
   plugins: [
     new HtmlWebpackPlugin({
       favicon: "assets/favicon.ico",
       template: "index.html",
       filename: "index.html"
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   names: ['vendor', 'manifest']
-    // }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
+    }),
     new webpack.optimize.ModuleConcatenationPlugin()
   ],
   module: {

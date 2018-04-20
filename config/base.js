@@ -5,6 +5,6 @@ module.exports = {
   },
   server: {
     uri: '/mock',
-    port: '8000',
+    port: '6000',
   }
 };
