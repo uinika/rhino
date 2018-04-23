@@ -47,6 +47,34 @@ export default class GlobalLayout extends React.Component {
                   loading: Loading
                 })}
               />
+              <Route
+                path="/layout/key"
+                component={Loadable({
+                  loader: () => import("../key"),
+                  loading: Loading
+                })}
+              />
+              <Route
+                path="/layout/user"
+                component={Loadable({
+                  loader: () => import("../user"),
+                  loading: Loading
+                })}
+              />
+              <Route
+                path="/layout/vehicle"
+                component={Loadable({
+                  loader: () => import("../vehicle"),
+                  loading: Loading
+                })}
+              />
+              <Route
+                path="/layout/setting"
+                component={Loadable({
+                  loader: () => import("../setting"),
+                  loading: Loading
+                })}
+              />
             </Switch>
           </Content>
         </Layout>
