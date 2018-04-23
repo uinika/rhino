@@ -21,7 +21,7 @@ export default class GlobalLayout extends React.Component {
           >
             <Menu.Item key="0">
               <Link to="/layout/dashboard">
-                <i className="fa fa-table" />&nbsp;&nbsp; 首页
+                <i className="fa fa-align-left" />&nbsp;&nbsp; 首页
               </Link>
             </Menu.Item>
             <Menu.Item key="1">
