@@ -20,19 +20,29 @@ export default class GlobalLayout extends React.Component {
             defaultSelectedKeys={["1"]}
           >
             <Menu.Item key="0">
-              <i className="fa fa-table" />&nbsp;&nbsp;首页
+              <Link to="/layout/dashboard">
+                <i className="fa fa-table" />&nbsp;&nbsp; 首页
+              </Link>
             </Menu.Item>
             <Menu.Item key="1">
-              <i className="fa fa-key" />&nbsp;&nbsp;钥匙管理
+              <Link to="/layout/key">
+                <i className="fa fa-key" />&nbsp;&nbsp;钥匙管理
+              </Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <i className="fa fa-car" />&nbsp;&nbsp;车辆管理
+              <Link to="/layout/vehicle">
+                <i className="fa fa-car" />&nbsp;&nbsp;车辆管理
+              </Link>
             </Menu.Item>
             <Menu.Item key="3">
-              <i className="fa fa-users" />&nbsp;&nbsp;用户管理
+              <Link to="/layout/user">
+                <i className="fa fa-users" />&nbsp;&nbsp;用户管理
+              </Link>
             </Menu.Item>
             <Menu.Item key="4">
-              <i className="fa fa-cogs" />&nbsp;&nbsp;系统设置
+              <Link to="/layout/setting">
+                <i className="fa fa-cogs" />&nbsp;&nbsp;系统设置
+              </Link>
             </Menu.Item>
           </Menu>
         </Header>
