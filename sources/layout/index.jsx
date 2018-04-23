@@ -7,13 +7,13 @@ import Loading from "../common/loading";
 export default class Layout extends React.Component {
   render() {
     return (
-      <div>
+      <div id="layout">
         <nav>导航</nav>
         <Switch>
           <Route
             path="/dashboard"
             component={Loadable({
-              loader: () => import("../dashboard/index.jsx"),
+              loader: () => import("../dashboard"),
               loading: Loading
             })}
           />

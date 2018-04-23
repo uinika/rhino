@@ -3,6 +3,10 @@ import "./style.scss";
 
 export default class Dashboard extends React.Component {
   render() {
-    return <h1>Hello, Dashboard !</h1>;
+    return (
+      <div id="dashboard">
+        <h1>Hello, Dashboard !</h1>
+      </div>
+    )
   }
 }
