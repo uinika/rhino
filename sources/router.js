@@ -3,7 +3,7 @@ import React from "react";
 import Loadable from "react-loadable";
 import Loading from "./common/loading";
 import { hot } from "react-hot-loader";
-import "antd/dist/antd.css";
+
 
 const Login = Loadable({
   loader: () => import("./login/index.jsx"),

@@ -6,6 +6,7 @@ import "babel-polyfill";
 // import router from "./router"
 import { hot } from "react-hot-loader";
 // css
+import "antd/dist/antd.css";
 import "./common/styles/base.scss";
 import "./common/styles/reset.scss";
 import Router from "./router.js";
