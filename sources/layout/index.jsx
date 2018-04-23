@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 import { Route, Link, Switch } from "react-router-dom";
 import Loadable from "react-loadable";
-import Loading from "../common/loading.jsx";
+import Loading from "../common/loading";
 
 export default class Layout extends React.Component {
   render() {
