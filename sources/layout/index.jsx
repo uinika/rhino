@@ -19,6 +19,9 @@ export default class GlobalLayout extends React.Component {
             mode="horizontal"
             defaultSelectedKeys={["1"]}
           >
+            <Menu.Item key="0">
+              <i className="fa fa-table" />&nbsp;&nbsp;首页
+            </Menu.Item>
             <Menu.Item key="1">
               <i className="fa fa-key" />&nbsp;&nbsp;钥匙管理
             </Menu.Item>
@@ -26,7 +29,10 @@ export default class GlobalLayout extends React.Component {
               <i className="fa fa-car" />&nbsp;&nbsp;车辆管理
             </Menu.Item>
             <Menu.Item key="3">
-              <i className="fa fa-user" />&nbsp;&nbsp;用户管理
+              <i className="fa fa-users" />&nbsp;&nbsp;用户管理
+            </Menu.Item>
+            <Menu.Item key="4">
+              <i className="fa fa-cogs" />&nbsp;&nbsp;系统设置
             </Menu.Item>
           </Menu>
         </Header>
