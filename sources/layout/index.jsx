@@ -13,10 +13,21 @@ export default class GlobalLayout extends React.Component {
       <Layout id="layout">
         <Header>
           <h1 className="logo">虚拟车钥匙管理系统</h1>
-          <Menu className="menu" theme="dark" mode="horizontal" defaultSelectedKeys={["1"]} >
-            <Menu.Item key="1">钥匙管理</Menu.Item>
-            <Menu.Item key="2">车辆管理</Menu.Item>
-            <Menu.Item key="3">用户管理</Menu.Item>
+          <Menu
+            className="menu"
+            theme="dark"
+            mode="horizontal"
+            defaultSelectedKeys={["1"]}
+          >
+            <Menu.Item key="1">
+              <i className="fa fa-key" />&nbsp;&nbsp;钥匙管理
+            </Menu.Item>
+            <Menu.Item key="2">
+              <i className="fa fa-car" />&nbsp;&nbsp;车辆管理
+            </Menu.Item>
+            <Menu.Item key="3">
+              <i className="fa fa-user" />&nbsp;&nbsp;用户管理
+            </Menu.Item>
           </Menu>
         </Header>
         <Layout>
