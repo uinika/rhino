@@ -59,7 +59,7 @@ export default class GlobalLayout extends React.Component {
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{ background: "#fff", padding: 0 }} />
+          {/* <Header style={{ background: "#fff", padding: 0 }} />*/}
           <Content style={{ margin: "0 16px" }}>
             <Switch>
               <Route
