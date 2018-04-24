@@ -2,16 +2,10 @@
   height: 100%;
   .logo {
     color: white;
-    margin: 0;
+    margin: auto 0 ;
     line-height: 64px;
-    display: inline-block;
-    position: relative;
-    top: -20px;
-    left: -20px;
+    width: 100%;
+    text-align: center;
     font-size: 25px;
-  }
-  .menu {
-    display: inline-block;
-    line-height: 64px;
   }
 }
