@@ -10,6 +10,7 @@ import "antd/dist/antd.css";
 import "./common/font-awesome/css/fontawesome-all.min.css";
 import "./common/styles/base.scss";
 import "./common/styles/reset.scss";
+import "./common/styles/theme.scss";
 import Router from "./router.js";
 
 ReactDOM.render(
