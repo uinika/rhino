@@ -15,7 +15,8 @@ module.exports = {
       "axios",
       "jquery",
       "lodash",
-      "moment"
+      "moment",
+      "echarts"
     ]
   },
   resolve: {
