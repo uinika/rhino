@@ -15,26 +15,26 @@ export default Form.create()(
       } = this.props.form;
 
       return (
-        <Form className="search-form common-box" layout="inline">
+        <Form layout="inline">
           <Row>
             <Col className="search-form-column" span={8}>
               <FormItem label="ID">
-                {getFieldDecorator("username")(
-                  <Input placeholder="Please input your ID card No." />
-                )}
-              </FormItem>
-            </Col>
-            <Col className="search-form-column" span={8}>
-              <FormItem label="VIN">
                 {getFieldDecorator("username")(
                   <Input placeholder="Please input ID card No." />
                 )}
               </FormItem>
             </Col>
             <Col className="search-form-column" span={8}>
-              <FormItem label="Phone number">
+              <FormItem label="VIN">
                 {getFieldDecorator("username")(
                   <Input placeholder="Please input Vehicle Identification Number." />
+                )}
+              </FormItem>
+            </Col>
+            <Col className="search-form-column" span={8}>
+              <FormItem label="Phone number">
+                {getFieldDecorator("username")(
+                  <Input placeholder="Please input phone number." />
                 )}
               </FormItem>
             </Col>
@@ -60,6 +60,13 @@ export default Form.create()(
                   <Input placeholder="Please input 4S Shop." />
                 )}
               </FormItem>
+            </Col>
+          </Row>
+          <Row >
+            <Col type="flex" justify="start">
+              <Button type="primary" icon="search">
+                Search
+              </Button>
             </Col>
           </Row>
         </Form>

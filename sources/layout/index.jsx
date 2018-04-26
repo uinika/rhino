@@ -10,7 +10,7 @@ const SubMenu = Menu.SubMenu;
 
 export default class GlobalLayout extends React.Component {
   state = {
-    collapsed: true
+    collapsed: false
   };
   onCollapse = collapsed => {
     console.log(collapsed);
