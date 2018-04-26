@@ -63,7 +63,7 @@ export default Form.create()(
             </Col>
           </Row>
           <Row >
-            <Col type="flex" justify="start">
+            <Col span={8} offset={16}>
               <Button type="primary" icon="search">
                 Search
               </Button>
