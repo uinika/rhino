@@ -13,5 +13,11 @@ $--border-color-base: #D8DCE5; // 一级边框
 $--border-color-light: #DFE4ED; // 二级边框
 $--border-color-lighter: #E6EBF5; // 三级边框
 $--border-color-extra-light: #EDF2FC; // 四级边框
-$--font-path: '../../../node_modules/element-ui/lib/theme-chalk/fonts';
-@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+// 通用的盒子样式
+.common-box {
+  padding: 24px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
