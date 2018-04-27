@@ -34,26 +34,24 @@ export default class ResultTable extends React.Component {
 
   expandedRowRender = () => {
     const columns = [
-      { title: "Date", dataIndex: "date", key: "date" },
-      { title: "Name", dataIndex: "name", key: "name" },
+      { title: "Share Key Name", dataIndex: "name", key: "name" },
+      { title: "Authorization Date", dataIndex: "date", key: "date" },
       {
         title: "Status",
-        key: "state",
+        key: "Key State",
         render: () => (
           <span>
-            <Badge status="success" />Finished
+            <Badge status="success" />Normal
           </span>
         )
       },
-      { title: "Upgrade Status", dataIndex: "upgradeNum", key: "upgradeNum" },
+      { title: "Cut-Off Date", dataIndex: "upgradeNum", key: "upgradeNum" },
       {
-        title: "Action",
+        title: "Operation ",
         dataIndex: "operation",
         key: "operation",
         render: () => (
           <span className="table-operation">
-            <a href="javascript:;">Pause</a>
-            <a href="javascript:;">Stop</a>
             <Dropdown overlay={menu}>
               <a href="javascript:;">
                 More <Icon type="down" />
@@ -68,8 +66,8 @@ export default class ResultTable extends React.Component {
       data.push({
         key: i,
         date: "2014-12-24 23:12:00",
-        name: "This is production name",
-        upgradeNum: "Upgraded: 56"
+        name: "This is share key name",
+        upgradeNum: "2015-07-20 13:19:33"
       });
     }
     return <Table columns={columns} dataSource={data} pagination={false} />;

@@ -1,7 +1,7 @@
 import { HashRouter, Route, Link, Switch } from "react-router-dom";
 import React from "react";
 import Loadable from "react-loadable";
-import Loading from "./common/loading";
+import Loading from "./common/components/loading";
 import { hot } from "react-hot-loader";
 
 
