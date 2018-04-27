@@ -7,7 +7,7 @@ import "babel-polyfill";
 import { hot } from "react-hot-loader";
 // css
 import "antd/dist/antd.css";
-import "./common/font-awesome/css/fontawesome-all.min.css";
+import "./common/styles/awesome/css/fontawesome-all.min.css";
 import "./common/styles/base.scss";
 import "./common/styles/reset.scss";
 import "./common/styles/theme.scss";
