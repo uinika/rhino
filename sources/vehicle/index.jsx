@@ -51,7 +51,7 @@ export default class key extends React.Component {
           <Table
             columns={columns}
             dataSource={data}
-            scroll={{ x: 2500, y: 300 }}
+            scroll={{ x: 2500, y: 600 }}
           />
         </div>
       </div>
