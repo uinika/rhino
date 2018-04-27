@@ -9,8 +9,8 @@ for (let i = 0; i < 100; i++) {
   data.push({
     key: i.toString(),
     name: `Edrward ${i}`,
-    age: 32,
-    address: `London Park no. ${i}`
+    age: 883372639183749183,
+    address: `Tianfu software park...building ${i}`
   });
 }
 
@@ -36,25 +36,25 @@ export default Form.create()(
       super(props);
       this.columns = [
         {
-          title: "name",
+          title: "Username",
           dataIndex: "name",
-          width: "25%",
+          width: "20%",
           render: (text, record) => this.renderColumns(text, record, "name")
         },
         {
-          title: "age",
+          title: "ID",
           dataIndex: "age",
-          width: "15%",
+          width: "20%",
           render: (text, record) => this.renderColumns(text, record, "age")
         },
         {
-          title: "address",
+          title: "Address",
           dataIndex: "address",
-          width: "40%",
+          width: "35%",
           render: (text, record) => this.renderColumns(text, record, "address")
         },
         {
-          title: "operation",
+          title: "Operation",
           dataIndex: "operation",
           render: (text, record) => {
             const { editable } = record;
