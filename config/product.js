@@ -43,8 +43,7 @@ module.exports = webpackMerge(common, {
     })
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: "url-loader",
         options: {
@@ -63,12 +62,25 @@ module.exports = webpackMerge(common, {
       {
         test: /\.scss$/,
         use: extractTextPlugin.extract({
-          use: [
-            {
+          use: [{
               loader: "css-loader"
             },
             {
               loader: "sass-loader"
+            }
+          ],
+          fallback: "style-loader"
+        })
+      },
+      {
+        test: /\.less$/,
+        use: extractTextPlugin.extract({
+          use: [{
+              loader: "css-loader"
+            },
+            {
+              loader: "less-loader",
+              options: { javascriptEnabled: true }
             }
           ],
           fallback: "style-loader"

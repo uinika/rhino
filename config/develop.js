@@ -24,8 +24,7 @@ module.exports = webpackMerge(common, {
     })
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: "url-loader",
         options: {
@@ -43,8 +42,7 @@ module.exports = webpackMerge(common, {
       },
       {
         test: /\.scss$/,
-        use: [
-          {
+        use: [{
             loader: "style-loader"
           },
           {
@@ -52,6 +50,20 @@ module.exports = webpackMerge(common, {
           },
           {
             loader: "sass-loader"
+          }
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [{
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "less-loader",
+            options: { javascriptEnabled: true }
           }
         ]
       }
