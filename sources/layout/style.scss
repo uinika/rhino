@@ -2,10 +2,23 @@
   height: 100%;
   .logo {
     color: white;
-    margin: auto 0 ;
+    margin: auto 0;
     line-height: 64px;
     width: 100%;
     text-align: center;
     font-size: 25px;
+  }
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
+  }
+  .trigger:hover {
+    color: #1890ff;
+  }
+  .logo {
+
   }
 }

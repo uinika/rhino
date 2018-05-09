@@ -12,55 +12,65 @@ export default class GlobalLayout extends React.Component {
   state = {
     collapsed: false
   };
-  onCollapse = collapsed => {
-    console.log(collapsed);
-    this.setState({ collapsed });
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
   };
   render() {
     return (
-      <Layout id="layout" style={{ minHeight: "100vh" }}>
-        <Sider
-          collapsible
-          collapsed={this.state.collapsed}
-          onCollapse={this.onCollapse}
-        >
+      <Layout id="layout">
+        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo">Admin</div>
-          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-            <Menu.Item key="0">
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+            <Menu.Item key="1">
               <Link to="/layout/dashboard">
                 <Icon type="appstore" />
                 <span>Dashboard</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="1">
-              <Link to="/layout/key">
-                <Icon type="key" />
-                <span>Key</span>
+            <Menu.Item key="2">
+              <Link to="/layout/agreement">
+                <Icon type="book" />
+                <span>Agreement</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="2">
+            <Menu.Item key="3">
               <Link to="/layout/vehicle">
                 <Icon type="car" />
                 <span>Vehicle</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="3">
+            <Menu.Item key="4">
               <Link to="/layout/user">
                 <Icon type="user" />
                 <span>User</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="4">
-              <Link to="/layout/setting">
-                <Icon type="setting" />
-                <span>Setting</span>
+            <Menu.Item key="5">
+              <Link to="/layout/key">
+                <Icon type="key" />
+                <span>Key</span>
               </Link>
             </Menu.Item>
           </Menu>
         </Sider>
         <Layout>
-          {/* <Header style={{ background: "#fff", padding: 0 }} />*/}
-          <Content style={{ margin: "0 16px" }}>
+          <Header style={{ background: "#fff", padding: 0 }}>
+            <Icon
+              className="trigger"
+              type={this.state.collapsed ? "menu-unfold" : "menu-fold"}
+              onClick={this.toggle}
+            />
+          </Header>
+          <Content
+            style={{
+              margin: "24px 16px",
+              padding: 24,
+              background: "#fff",
+              minHeight: 280
+            }}
+          >
             <Switch>
               <Route
                 path="/layout/dashboard"
@@ -91,17 +101,14 @@ export default class GlobalLayout extends React.Component {
                 })}
               />
               <Route
-                path="/layout/setting"
+                path="/layout/agreement"
                 component={Loadable({
-                  loader: () => import("../setting"),
+                  loader: () => import("../agreement"),
                   loading: Loading
                 })}
               />
             </Switch>
           </Content>
-          <Footer style={{ textAlign: "center" }}>
-            Rhino ©2018 Created by Hank
-          </Footer>
         </Layout>
       </Layout>
     );
