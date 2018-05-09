@@ -1,4 +1,35 @@
 #login {
   height: 100%;
-  background: #001529;
+  background: url("../assets/login/background.jpg");
+  .card {
+    background: url("../assets/login/form.png");
+    width: 524px;
+    height: 262px;
+    .logo {
+      color: white;
+      font-size: 35px;
+      margin: 30px 0 15px 51px;
+    }
+    .form {
+      margin: 0 160px 0 50px;
+      .button {
+        position: relative;
+        float: right;
+        background: rgba($color: #FFF, $alpha: 0);
+        border: transparent;
+        height: 240px;
+        width: 92px;
+        position: relative;
+        top: -182px;
+        left: 150px;
+        border-radius: 0 21px 21px 0;
+        &:hover {
+          background: rgba($color: #000, $alpha: 0.1);
+        }
+        &:active {
+          background: rgba($color: #000, $alpha: 0.3);
+        }
+      }
+    }
+  }
 }

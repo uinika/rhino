@@ -18,45 +18,36 @@ export default Form.create()(
       const { getFieldDecorator } = this.props.form;
       return (
         <Row id="login" type="flex" justify="center" align="middle">
-          <Col span={4}>
-            <Form onSubmit={this.handleSubmit} className="login-form">
+          <Col className="card" span={4}>
+            <h1 className="logo">Admin</h1>
+            <Form className="form" onSubmit={this.handleSubmit}>
               <FormItem>
                 {getFieldDecorator("username", {
-                  rules: [{ required: true, message: "请输入你的用户名！" }]
+                  rules: [{ required: true, message: "请输入用户名！" }]
                 })(
                   <Input
                     prefix={
                       <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
-                    placeholder="用户名"
+                    placeholder="用户名" size="large"
                   />
                 )}
               </FormItem>
               <FormItem>
                 {getFieldDecorator("password", {
-                  rules: [{ required: true, message: "请输入你的密码！" }]
+                  rules: [{ required: true, message: "请输入密码！" }]
                 })(
                   <Input
                     prefix={
                       <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     type="password"
-                    placeholder="密码"
+                    placeholder="密码" size="large"
                   />
                 )}
               </FormItem>
               <FormItem>
-                {getFieldDecorator("remember", {
-                  valuePropName: "checked",
-                  initialValue: true
-                })(<Checkbox>记住我</Checkbox>)}
-
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="login-form-button"
-                >
-                  登录
+                <Button type="primary" htmlType="submit" className="button">
                 </Button>
               </FormItem>
             </Form>
