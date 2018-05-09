@@ -13,15 +13,14 @@
     .form {
       margin: 0 160px 0 50px;
       .button {
-        position: relative;
-        float: right;
+        position: absolute;
         background: rgba($color: #FFF, $alpha: 0);
         border: transparent;
         height: 240px;
-        width: 92px;
+        width: 90px;
         position: relative;
-        top: -182px;
-        left: 150px;
+        top: -215px;
+        left: 372px;
         border-radius: 0 21px 21px 0;
         &:hover {
           background: rgba($color: #000, $alpha: 0.1);
