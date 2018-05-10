@@ -3,10 +3,18 @@ import "./style.scss";
 import { Route, Link, Switch } from "react-router-dom";
 import Loadable from "react-loadable";
 import Loading from "../common/components/loading";
-import { Layout, Menu, Breadcrumb, Icon } from "antd";
+import { Layout, Menu, Breadcrumb, Icon, Dropdown } from "antd";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
+
+const DropdownMenu = (
+  <Menu>
+    <Menu.Item>
+      <a rel="noopener noreferrer" href="#">退出</a>
+    </Menu.Item>
+  </Menu>
+);
 
 export default class GlobalLayout extends React.Component {
   state = {
@@ -62,6 +70,11 @@ export default class GlobalLayout extends React.Component {
               type={this.state.collapsed ? "menu-unfold" : "menu-fold"}
               onClick={this.toggle}
             />
+            <Dropdown overlay={DropdownMenu}>
+              <a className="admin">
+                <Icon className="trigger" type="user" />
+              </a>
+            </Dropdown>
           </Header>
           <Content className="content">
             <Switch>

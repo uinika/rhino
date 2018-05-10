@@ -15,6 +15,9 @@
     .header {
       background: white;
       padding: 0;
+      .admin {
+        float: right;
+      }
       .trigger {
         font-size: 18px;
         line-height: 64px;

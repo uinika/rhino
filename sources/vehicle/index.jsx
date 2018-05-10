@@ -43,7 +43,7 @@ for (let i = 0; i < 1000; i++) {
 export default class key extends React.Component {
   render() {
     return (
-      <div id="key">
+      <div id="key" className="animated fadeIn">
         <div className="search-form common-box">
           <CommonSearchForm />
         </div>

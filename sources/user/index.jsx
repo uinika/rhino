@@ -129,7 +129,7 @@ export default Form.create()(
     }
     render() {
       return (
-        <div id="key">
+        <div id="key" className="animated fadeIn">
           <div className="search-form common-box">
             <CommonSearchForm />
           </div>

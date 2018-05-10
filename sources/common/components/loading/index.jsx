@@ -6,7 +6,7 @@ export default class Loading extends React.Component {
   render() {
     return (
       <Row id="loading" type="flex" justify="center" align="middle">
-        <Col span={4}>
+        <Col>
           <Spin size="large" />
         </Col>
       </Row>
