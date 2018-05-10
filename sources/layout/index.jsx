@@ -19,7 +19,7 @@ export default class GlobalLayout extends React.Component {
   };
   render() {
     return (
-      <Layout id="layout">
+      <Layout id="layout" className="animated fadeIn">
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo">Admin</div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>

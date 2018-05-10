@@ -8,6 +8,7 @@ import "babel-polyfill";
 import "./common/styles/base.scss";
 import "./common/styles/reset.scss";
 import "./common/styles/awesome/css/fontawesome-all.min.css";
+import "animate.css/animate.min.css";
 // theme
 import "antd/dist/antd.less";
 import "./common/styles/theme.less";

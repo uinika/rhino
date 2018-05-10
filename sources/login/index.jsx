@@ -9,7 +9,7 @@ export default Form.create()(
       e.preventDefault();
       this.props.form.validateFields((error, values) => {
         if (!error) {
-          console.info("USER INFO:" ,values)
+          console.info("USER INFO:", values);
           this.props.history.push("layout/dashboard");
         }
       });
@@ -17,38 +17,55 @@ export default Form.create()(
     render() {
       const { getFieldDecorator } = this.props.form;
       return (
-        <Row id="login" type="flex" justify="center" align="middle">
+        <Row
+          id="login"
+          className="animated fadeInLeftBig"
+          type="flex"
+          justify="center"
+          align="middle"
+        >
           <Col className="card" span={4}>
             <h1 className="logo">Admin</h1>
             <Form className="form" onSubmit={this.handleSubmit}>
               <FormItem>
                 {getFieldDecorator("username", {
-                  rules: [{ required: true, message: "请输入用户名！" }]
+                  rules: [
+                    {
+                      required: true,
+                      message: "请输入用户名！"
+                    }
+                  ]
                 })(
                   <Input
                     prefix={
                       <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
-                    placeholder="用户名" size="large"
+                    placeholder="用户名"
+                    size="large"
                   />
                 )}
               </FormItem>
               <FormItem>
                 {getFieldDecorator("password", {
-                  rules: [{ required: true, message: "请输入密码！" }]
+                  rules: [
+                    {
+                      required: true,
+                      message: "请输入密码！"
+                    }
+                  ]
                 })(
                   <Input
                     prefix={
                       <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     type="password"
-                    placeholder="密码" size="large"
+                    placeholder="密码"
+                    size="large"
                   />
                 )}
               </FormItem>
               <FormItem>
-                <Button type="primary" htmlType="submit" className="button">
-                </Button>
+                <Button type="primary" htmlType="submit" className="button" />
               </FormItem>
             </Form>
           </Col>
