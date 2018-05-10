@@ -1,8 +1,9 @@
+@import "../common/styles/color.scss";
 #layout {
   height: 100%;
   .left {
     .logo {
-      color: white;
+      color: $color-white;
       margin: auto 0;
       line-height: 64px;
       width: 100%;
@@ -13,7 +14,7 @@
   .right {
     overflow: hidden;
     .header {
-      background: white;
+      background: $color-white;
       padding: 0;
       .admin {
         float: right;
@@ -30,10 +31,9 @@
       }
     }
     .content {
-      margin: 24px 16px;
-      padding: 24px;
-      background: white;
-      min-height: 280px;
+      // margin: 24px 16px;
+      // padding: 24px;
+      background: $color-border-light;
     }
   }
 }
