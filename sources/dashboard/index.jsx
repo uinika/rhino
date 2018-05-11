@@ -21,9 +21,11 @@ export default class Dashboard extends React.Component {
               bordered={false}
               extra={<a href="#/layout/key">More</a>}
             >
-              <p>Card content</p>
-              <p>Card content</p>
-              <p>Card content</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
             </Card>
           </Col>
           <Col span={12}>
@@ -36,9 +38,11 @@ export default class Dashboard extends React.Component {
               bordered={false}
               extra={<a href="#/layout/vehicle">More</a>}
             >
-              <p>Card content</p>
-              <p>Card content</p>
-              <p>Card content</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
             </Card>
           </Col>
           <Col span={12}>
@@ -51,9 +55,11 @@ export default class Dashboard extends React.Component {
               bordered={true}
               extra={<a href="#/layout/user">More</a>}
             >
-              <p>Card content</p>
-              <p>Card content</p>
-              <p>Card content</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
             </Card>
           </Col>
           <Col span={12}>
@@ -66,9 +72,11 @@ export default class Dashboard extends React.Component {
               bordered={true}
               extra={<a href="#/layout/agreement/bluetooth">More</a>}
             >
-              <p>Card content</p>
-              <p>Card content</p>
-              <p>Card content</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
+              <p>Some updated information.</p>
             </Card>
           </Col>
         </Row>

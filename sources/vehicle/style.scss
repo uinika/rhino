@@ -2,9 +2,17 @@
   .ant-form {
     .ant-form-item {
       display: flex;
+      .ant-form-item-label {
+        width: 80px;
+        text-align: right;
+      }
     }
     .ant-form-item-control-wrapper {
       flex: 1;
+    }
+    .ant-btn {
+      float:right;
+      margin-right: 16px;
     }
   }
 }
