@@ -19,12 +19,17 @@
       .admin {
         float: right;
       }
+      .ant-breadcrumb {
+        display: inline-block;
+        margin-left: 30px;
+      }
       .trigger {
         font-size: 18px;
         line-height: 64px;
         padding: 0 24px;
         cursor: pointer;
         transition: color .3s;
+        border-right: 1px solid $color-border-base;
       }
       .trigger:hover {
         color: #1890ff;

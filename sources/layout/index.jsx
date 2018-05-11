@@ -11,7 +11,9 @@ const SubMenu = Menu.SubMenu;
 const DropdownMenu = (
   <Menu>
     <Menu.Item>
-      <a rel="noopener noreferrer" href="#">退出</a>
+      <a rel="noopener noreferrer" href="#">
+        退出
+      </a>
     </Menu.Item>
   </Menu>
 );
@@ -28,7 +30,12 @@ export default class GlobalLayout extends React.Component {
   render() {
     return (
       <Layout id="layout" className="animated fadeIn">
-        <Sider className="left" trigger={null} collapsible collapsed={this.state.collapsed}>
+        <Sider
+          className="left"
+          trigger={null}
+          collapsible
+          collapsed={this.state.collapsed}
+        >
           <div className="logo">Admin</div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
             <Menu.Item key="1">
@@ -70,6 +77,12 @@ export default class GlobalLayout extends React.Component {
               type={this.state.collapsed ? "menu-unfold" : "menu-fold"}
               onClick={this.toggle}
             />
+            <Breadcrumb>
+              <Breadcrumb.Item>Home</Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <a href="#/layout/dashboard">Dashboard</a>
+              </Breadcrumb.Item>
+            </Breadcrumb>
             <Dropdown overlay={DropdownMenu}>
               <a className="admin">
                 <Icon className="trigger" type="user" />

@@ -10,12 +10,7 @@ export default class Dashboard extends React.Component {
     return (
       <div id="dashboard" className="animated fadeIn">
         <Card>
-          <Breadcrumb>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <a href="#/layout/dashboard">Dashboard</a>
-            </Breadcrumb.Item>
-          </Breadcrumb>
+          Charts
         </Card>
         <Row gutter={1}>
           <Col span={12}>
