@@ -44,12 +44,26 @@ export default class GlobalLayout extends React.Component {
                 <span>Dashboard</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="2">
-              <Link to="/layout/agreement">
-                <Icon type="book" />
-                <span>Agreement</span>
-              </Link>
-            </Menu.Item>
+            <SubMenu
+              key="agreement"
+              title={
+                <span>
+                  <Icon type="book" />
+                  <span>Agreement</span>
+                </span>
+              }
+            >
+              <Menu.Item key="bluetooth">
+                <Link to="/layout/agreement/bluetooth">
+                  <i class="fab fa-bluetooth" />&nbsp;&nbsp;Bluetooth
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="window">
+                <Link to="/layout/agreement/window">
+                  <i class="fab fa-stumbleupon-circle" />&nbsp;&nbsp;Window
+                </Link>
+              </Menu.Item>
+            </SubMenu>
             <Menu.Item key="3">
               <Link to="/layout/vehicle">
                 <Icon type="car" />
@@ -120,9 +134,16 @@ export default class GlobalLayout extends React.Component {
                 })}
               />
               <Route
-                path="/layout/agreement"
+                path="/layout/agreement/bluetooth"
                 component={Loadable({
-                  loader: () => import("../agreement"),
+                  loader: () => import("../agreement/bluetooth"),
+                  loading: Loading
+                })}
+              />
+              <Route
+                path="/layout/agreement/window"
+                component={Loadable({
+                  loader: () => import("../agreement/window"),
                   loading: Loading
                 })}
               />

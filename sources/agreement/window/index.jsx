@@ -4,13 +4,13 @@ import { Breadcrumb, Card, Input, Select, Col, Row, Form, Icon } from "antd";
 
 const FormItem = Form.Item;
 
-export default class Agreement extends React.Component {
+export default class AgreementWindow extends React.Component {
   render() {
     return (
-      <div id="agreement" className="animated fadeIn">
+      <div id="agreement-window" className="animated fadeIn">
         <Card bordered={true}>
           <Form layout="inline" onSubmit={this.handleSubmit}>
-            <Row gutter={40}>
+            <Row gutter={30}>
               <Col span={6}>
                 <FormItem label="Username">
                   <Input placeholder="Username" />

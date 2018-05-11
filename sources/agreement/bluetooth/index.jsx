@@ -4,10 +4,10 @@ import { Breadcrumb, Card, Input, Select, Col, Row, Form, Icon } from "antd";
 
 const FormItem = Form.Item;
 
-export default class Vehicle extends React.Component {
+export default class AgreementBluetooth extends React.Component {
   render() {
     return (
-      <div id="vehicle" className="animated fadeIn">
+      <div id="agreement-bluetooth" className="animated fadeIn">
         <Card bordered={true}>
           <Form layout="inline" onSubmit={this.handleSubmit}>
             <Row gutter={30}>
