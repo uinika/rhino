@@ -8,10 +8,13 @@
     .logo {
       color: white;
       font-size: 35px;
-      margin: 30px 0 15px 51px;
+      margin: 25px 0 10px 55px;
     }
     .form {
       margin: 0 160px 0 50px;
+      .ant-form-item {
+        margin-bottom: 15px;
+      }
       .button {
         position: absolute;
         background: rgba($color: #FFF, $alpha: 0);

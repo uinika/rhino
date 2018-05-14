@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.scss";
-import { Row, Col, Form, Icon, Input, Button, Checkbox } from "antd";
+import { Row, Col, Form, Icon, Input, Button, Checkbox, Select } from "antd";
 const FormItem = Form.Item;
+const Option = Select.Option;
 
 export default Form.create()(
   class Login extends React.Component {
@@ -41,7 +42,6 @@ export default Form.create()(
                       <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     placeholder="用户名"
-                    size="large"
                   />
                 )}
               </FormItem>
@@ -60,8 +60,29 @@ export default Form.create()(
                     }
                     type="password"
                     placeholder="密码"
-                    size="large"
                   />
+                )}
+              </FormItem>
+              <FormItem>
+                {getFieldDecorator("language", {
+                  rules: [
+                    {
+                      required: true,
+                      message: "请选择默认语言！"
+                    }
+                  ]
+                })(
+                  <Select
+                    prefix={
+                      <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
+                    }
+                    placeholder="语言"
+                    defaultValue="chinese"
+                    style={{ width: 200 }}
+                  >
+                    <Option value="chinese">Chinese</Option>
+                    <Option value="english">English</Option>
+                  </Select>
                 )}
               </FormItem>
               <FormItem>
