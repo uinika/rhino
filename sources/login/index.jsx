@@ -77,7 +77,6 @@ export default Form.create()(
                       <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     placeholder="语言"
-                    defaultValue="chinese"
                     style={{ width: 200 }}
                   >
                     <Option value="chinese">Chinese</Option>
