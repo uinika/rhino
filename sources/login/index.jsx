@@ -29,60 +29,33 @@ export default Form.create()(
             <h1 className="logo">Admin</h1>
             <Form className="form" onSubmit={this.handleSubmit}>
               <FormItem>
-                {getFieldDecorator("username", {
-                  rules: [
-                    {
-                      required: true,
-                      message: "请输入用户名！"
-                    }
-                  ]
-                })(
-                  <Input
-                    prefix={
-                      <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
-                    }
-                    placeholder="用户名"
-                  />
-                )}
+                <Input
+                  prefix={
+                    <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
+                  }
+                  placeholder="用户名"
+                />
               </FormItem>
               <FormItem>
-                {getFieldDecorator("password", {
-                  rules: [
-                    {
-                      required: true,
-                      message: "请输入密码！"
-                    }
-                  ]
-                })(
-                  <Input
-                    prefix={
-                      <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
-                    }
-                    type="password"
-                    placeholder="密码"
-                  />
-                )}
+                <Input
+                  prefix={
+                    <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
+                  }
+                  type="password"
+                  placeholder="密码"
+                />
               </FormItem>
               <FormItem>
-                {getFieldDecorator("language", {
-                  rules: [
-                    {
-                      required: true,
-                      message: "请选择默认语言！"
-                    }
-                  ]
-                })(
-                  <Select
-                    prefix={
-                      <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
-                    }
-                    placeholder="语言"
-                    style={{ width: 200 }}
-                  >
-                    <Option value="chinese">Chinese</Option>
-                    <Option value="english">English</Option>
-                  </Select>
-                )}
+                <Select
+                  prefix={
+                    <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
+                  }
+                  placeholder="语言"
+                  style={{ width: 190 }}
+                >
+                  <Option value="chinese">Chinese</Option>
+                  <Option value="english">English</Option>
+                </Select>
               </FormItem>
               <FormItem>
                 <Button type="primary" htmlType="submit" className="button" />

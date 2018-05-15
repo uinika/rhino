@@ -26,8 +26,8 @@ export default class SearchForm extends React.Component {
               </FormItem>
             </Col>
             <Col span={6}>
-              <FormItem label="User ID">
-                <Input placeholder="User ID" />
+              <FormItem label="Model">
+                <Input placeholder="Model" />
               </FormItem>
             </Col>
             <Col span={6}>
@@ -45,6 +45,11 @@ export default class SearchForm extends React.Component {
             <Col span={6}>
               <FormItem label="Username">
                 <Input placeholder="Username" />
+              </FormItem>
+            </Col>
+            <Col span={6}>
+              <FormItem label="User ID">
+                <Input placeholder="User ID" />
               </FormItem>
             </Col>
             <Col span={6}>

@@ -1,18 +1,17 @@
 #vehicle {
-  .ant-form {
-    .ant-form-item {
-      display: flex;
-      .ant-form-item-label {
-        width: 80px;
-        text-align: right;
-      }
-    }
-    .ant-form-item-control-wrapper {
-      flex: 1;
-    }
-    .ant-btn {
-      float:right;
-      margin-right: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .search-from {
+    height: 150px;
+  }
+  .search-result {
+    height: 100%;
+    overflow-x: auto;
+    .ant-card-body {
+      height: 1000px;
+      width: 100%;
+      padding: 0;
     }
   }
 }
