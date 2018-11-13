@@ -1,5 +1,12 @@
 # Rhino
 
+本项目是一个基于React16.6.3完成的boilerplate，整合了当前最新版本的Router和Mobx状态管理机制，相关内容可以参考笔者Github Pages中的如下两篇文章：
+
+[《React 16.6.x全新全译》](https://uinika.github.io/web/broswer/react.html)
+
+[《Flux数据流两三事儿》](https://uinika.github.io/web/broswer/flux.html/#Mobx)
+
+
 ![logo](sources/assets/rhino.png)
 
 ## 开发环境（Development Environment）
