@@ -1,3 +1,130 @@
+@import "../common/styles/color.scss";
+// make the border works right.
+@mixin border-helper {
+  .left,
+  .right {
+    width: 50%;
+    border: 1px solid $color-border-base;
+    border-radius: 5px !important;
+    font-size: 17px;
+    font-weight: normal;
+    color: $color-font-regular;
+    .ant-tag {
+      float: right;
+    }
+  }
+  .left {
+    margin: 8px 8px 8px 16px;
+  }
+  .right {
+    margin: 8px 16px 8px 8px;
+  }
+  h5 {
+    font-size: 14px;
+    color: $color-font-primary;
+    padding: 15px 25px;
+    border-bottom: 1px solid $color-border-lighter;
+    margin: 0;
+    background: $color-white-dark;
+  }
+  .list {
+    text-indent: none;
+    padding: 0;
+    margin: 0;
+    height: 279px;
+    overflow-y: auto;
+    li {
+      border-bottom: 1px solid $color-border-lighter;
+      padding: 10px 25px;
+      font-size: 13px;
+      color: $color-font-regular;
+      &:hover {
+        background: $color-border-light-extra;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 #dashboard {
-  color: blue;
+  article.content {
+    display: flex;
+    flex-direction: column;
+    .charts {
+      width: 100%;
+      height: 130px;
+      margin: 15px 0 10px 0;
+      display: flex;
+      flex-direction: row;
+      div.box {
+        width: 25%;
+        margin: 16px;
+        border-radius: 5px;
+        display: flex;
+        border: 1px solid $color-border-base;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+        &:hover {
+          background: rgba($color-border-light-extra, 0.7);
+        }
+        .icon {
+          width: 110px;
+          font-size: 50px;
+          border-radius: 5px 0 0 5px;
+          color: $color-white;
+          display: flex;
+          align-content: center;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          i {
+            position: relative;
+            top: 20px;
+          }
+          &:hover {
+            font-size: 60px;
+          }
+        }
+        .infomation {
+          span {
+            margin: 16px;
+            display: block;
+            color: $color-black-light-extra;
+            &:nth-child(1) {
+              font-size: 14.5px;
+            }
+            &:nth-child(2) {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      div.box.blue .icon {
+        background: rgba($color-box-blue, 0.7);
+      }
+      div.box.orange .icon {
+        background: rgba($color-box-blue, 0.7);
+      }
+      div.box.green .icon {
+        background: rgba($color-box-blue, 0.7);
+      }
+      div.box.red .icon {
+        background: rgba($color-box-blue, 0.7);
+      }
+    }
+    .key {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      @include border-helper;
+      ul.list {
+        list-style: none;
+      }
+    }
+    .agreement {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      @include border-helper;
+    }
+  }
 }

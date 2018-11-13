@@ -1,5 +1,6 @@
 const path = require("path"),
   common = require("./common"),
+  styleConfig = require("./style"),
   webpack = require("webpack"),
   webpackMerge = require("webpack-merge");
 
@@ -42,30 +43,11 @@ module.exports = webpackMerge(common, {
       },
       {
         test: /\.scss$/,
-        use: [{
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "sass-loader"
-          }
-        ]
+        ...styleConfig.scssDevelop()
       },
       {
         test: /\.less$/,
-        use: [{
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "less-loader",
-            options: { javascriptEnabled: true }
-          }
-        ]
+        ...styleConfig.lessDevelop()
       }
     ]
   }

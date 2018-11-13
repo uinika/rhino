@@ -1,4 +1,12 @@
 @import "../common/styles/color.scss";
+
+@mixin trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
 #layout {
   height: 100%;
   .left {
@@ -8,36 +16,47 @@
       line-height: 64px;
       width: 100%;
       text-align: center;
-      font-size: 25px;
+      font-size: 28px;
+      white-space: nowrap;
+      span {
+        margin-left: 15px;
+      }
+      &:hover {
+        cursor: pointer;
+        background: $color-black-light;
+      }
     }
   }
   .right {
-    overflow: hidden;
     .header {
       background: $color-white;
       padding: 0;
+      border-bottom: 1px solid $color-border-base;
       .admin {
         float: right;
+        span {
+          font-size: 15px;
+        }
+        .anticon-user {
+          padding-left: 12px !important;
+        }
       }
       .ant-breadcrumb {
         display: inline-block;
         margin-left: 30px;
       }
-      .trigger {
-        font-size: 18px;
-        line-height: 64px;
-        padding: 0 24px;
-        cursor: pointer;
-        transition: color .3s;
+      .trigger-menu {
+        @include trigger();
         border-right: 1px solid $color-border-base;
       }
-      .trigger:hover {
-        color: #1890ff;
+      .trigger-user {
+        @include trigger();
+        transition: color 0.3s;
       }
     }
     .content {
       flex: 100%;
-      background: $color-border-light;
+      background: $color-white;
     }
   }
 }

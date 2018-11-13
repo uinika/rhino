@@ -81,8 +81,6 @@ gulp.task("clean", () => {
 });
 
 /** gulp test */
-// "webpack/hot/dev-server",
-// "webpack-dev-server/client?http://localhost:" + Port
 gulp.task("test", function () {
   nodemon({
     script: "./server/app.js",

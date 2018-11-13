@@ -1,0 +1,13 @@
+{
+  "head": {
+    "status": "SUCCESS",
+    "message": "This operation succeeds !",
+    "total": 0
+  },
+  "body": {
+    "statistic1": 2020,
+    "statistic2": 2019,
+    "statistic3": 2018,
+    "statistic4": 1985
+  }
+}

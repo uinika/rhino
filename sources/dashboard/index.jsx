@@ -1,85 +1,16 @@
 import React from "react";
+import Sheet from "./sheet";
+import Statistic from "./statistic";
 import "./style.scss";
-import { Breadcrumb, Card, Input, Select, Col, Row, Icon } from "antd";
-const Search = Input.Search;
-const InputGroup = Input.Group;
-const Option = Select.Option;
 
 export default class Dashboard extends React.Component {
   render() {
     return (
       <div id="dashboard" className="animated fadeIn">
-        <Card>Charts</Card>
-        <Row gutter={1}>
-          <Col span={12}>
-            <Card
-              title={
-                <span>
-                  <Icon type="key" />&nbsp;&nbsp;Key
-                </span>
-              }
-              bordered={false}
-              extra={<a href="#/layout/key">More</a>}
-            >
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-            </Card>
-          </Col>
-          <Col span={12}>
-            <Card
-              title={
-                <span>
-                  <Icon type="car" />&nbsp;&nbsp;Vehicle
-                </span>
-              }
-              bordered={false}
-              extra={<a href="#/layout/vehicle">More</a>}
-            >
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-            </Card>
-          </Col>
-          <Col span={12}>
-            <Card
-              title={
-                <span>
-                  <Icon type="user" />&nbsp;&nbsp;User
-                </span>
-              }
-              bordered={true}
-              extra={<a href="#/layout/user">More</a>}
-            >
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-            </Card>
-          </Col>
-          <Col span={12}>
-            <Card
-              title={
-                <span>
-                  <Icon type="book" />&nbsp;&nbsp;Agreement
-                </span>
-              }
-              bordered={true}
-              extra={<a href="#/layout/agreement/bluetooth">More</a>}
-            >
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-              <p>Some updated information.</p>
-            </Card>
-          </Col>
-        </Row>
+        <article className="content">
+          <Statistic />
+          <Sheet />
+        </article>
       </div>
     );
   }

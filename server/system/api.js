@@ -1,9 +1,12 @@
-const router = require('express').Router(),
-  util = require('../common/util.js');
+const router = require("express").Router(),
+  util = require("../common/util.js");
 
-router.route('/sys/logs')
-  .get(function (request, response) {
-    response.json(util.json('/system/data/logs.json'));
-  });
+router.route("/system/login").post((request, response) => {
+  response.json(util.json("/system/data/login.json"));
+});
+
+router.route("/system/logout").put((request, response) => {
+  response.json(util.json("/system/data/logout.json"));
+});
 
 module.exports = router;

@@ -4,7 +4,6 @@ import Loadable from "react-loadable";
 import Loading from "./common/components/loading";
 import { hot } from "react-hot-loader";
 
-
 const Login = Loadable({
   loader: () => import("./login/index.jsx"),
   loading: Loading

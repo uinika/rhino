@@ -1,22 +1,3 @@
-// export const chart = (selector = "", option = {}) => {
-//   echarts.init(document.querySelector(selector)).setOption(option);
-// };
-
-export const message = (vm, type, message) => {
-  vm.$message({
-    type: type || "info",
-    message: message || ""
-  })
-};
-
-export const notify = (vm, type, message, title) => {
-  vm.$notify({
-    type: type || "info",
-    message: message || "",
-    title: title || "",
-  })
-};
-
 export const storage = {
   get(key) {
     if (key) {
@@ -36,5 +17,20 @@ export const storage = {
     if (key) {
       sessionStorage.removeItem(key);
     }
+  },
+  empty() {
+    this.remove("token");
+    this.remove("username");
+    this.remove("permissions");
+    this.remove("path");
+    this.remove("name");
+  }
+};
+
+export const timeConvertor = moments => {
+  if (moments && moments.length == 2) {
+    const start = moments[0];
+    const end = moments[1];
+    return start && end ? start.format("YYYY-MM-DD HH:mm:ss") + "~" + end.format("YYYY-MM-DD HH:mm:ss") : "";
   }
 };

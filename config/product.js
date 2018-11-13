@@ -1,6 +1,7 @@
 const path = require("path"),
-  common = require("./common"),
   webpack = require("webpack"),
+  common = require("./common"),
+  styleConfig = require("./style"),
   webpackMerge = require("webpack-merge"),
   ExtractTextPlugin = require("extract-text-webpack-plugin"),
   OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -61,30 +62,15 @@ module.exports = webpackMerge(common, {
       },
       {
         test: /\.scss$/,
-        use: extractTextPlugin.extract({
-          use: [{
-              loader: "css-loader"
-            },
-            {
-              loader: "sass-loader"
-            }
-          ],
-          fallback: "style-loader"
-        })
+        use: extractTextPlugin.extract(
+          styleConfig.scssProduct()
+        )
       },
       {
         test: /\.less$/,
-        use: extractTextPlugin.extract({
-          use: [{
-              loader: "css-loader"
-            },
-            {
-              loader: "less-loader",
-              options: { javascriptEnabled: true }
-            }
-          ],
-          fallback: "style-loader"
-        })
+        use: extractTextPlugin.extract(
+          styleConfig.lessProduct()
+        )
       }
     ]
   }
