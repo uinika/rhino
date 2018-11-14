@@ -1,11 +1,10 @@
 # Rhino
 
-本项目是一个基于React16.6.3完成的boilerplate，整合了当前最新版本的Router和Mobx状态管理机制，相关内容可以参考笔者Github Pages中的如下两篇文章：
+本项目是一个基于 React16.6.3 完成的 boilerplate，整合了目前最新版的`react-router`路由和`mobx`状态管理，具体技术相关的资料可以参见笔者[Github Pages](https://uinika.github.io/)的如下两篇文章：
 
-[《React 16.6.x全新全译》](https://uinika.github.io/web/broswer/react.html)
+[《React 16.6.x 全新全译》](https://uinika.github.io/web/broswer/react.html)
 
-[《Flux数据流两三事儿》](https://uinika.github.io/web/broswer/flux.html/#Mobx)
-
+[《Flux 数据流两三事儿》](https://uinika.github.io/web/broswer/flux.html/#Mobx)
 
 ![logo](sources/assets/rhino.png)
 
@@ -41,7 +40,7 @@
 
 通过**URL**地址定位服务器提供的资源数据，并使用 HTTP 动词（GET、POST、DELETE、PUT）描述操作。
 
-| HTTP 请求方式 | 操作语义 |  
+| HTTP 请求方式 | 操作语义 |
 | :------------ | :------- |
 | `GET`         | _Query_  |
 | `POST`        | _Save_   |
