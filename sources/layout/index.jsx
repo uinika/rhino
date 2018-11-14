@@ -30,22 +30,25 @@ export default class GlobalLayout extends React.Component {
 
   // 处理退出系统事件
   handleLogout = () => {
+    let router = this.props.history.push;
     confirm({
-      title: "确认退出？",
+      title: "您确定要退出Rhino吗？",
       content: "",
-      okText: "确认",
+      okText: "残忍同意",
       okType: "danger",
-      cancelText: "取消",
+      cancelText: "委婉拒绝",
       onOk() {
         Http.fetch({
-          method: "GET",
+          method: "PUT",
           url: Http.url.master + "/system/logout"
         })
           .then(result => {
             const data = result.data;
             if (Http.protocol(data, "SUCCESS")) {
               message.success(data.head.message);
-              location.href = data.body.url;
+              router("/login");
+            } else {
+              message.error("糟糕，退出失败了，请联系管理员！");
             }
           })
           .then(() => {
@@ -53,10 +56,6 @@ export default class GlobalLayout extends React.Component {
           });
       }
     });
-  };
-
-  componentDidMount = () => {
-    console.log("componentDidMount!");
   };
 
   handleGithub = () => {

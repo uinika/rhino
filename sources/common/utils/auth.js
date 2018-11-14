@@ -6,11 +6,11 @@ import { storage } from "../utils/helper";
 import queryString from "querystringify";
 
 export default {
-  /**  Handle url search */
+  /**  Handle url search when take the thirdparty auth */
   initializer() {
-    storage.set("token", "demo");
-    storage.set("username", "demo");
-    storage.set("permissions", "demo");
+    // storage.set("token", "demo");
+    // storage.set("username", "demo");
+    // storage.set("permissions", "demo");
   },
 
   /** Http interceptor */
