@@ -1,28 +1,27 @@
 import React from "react";
 import "./style.scss";
-import { Input, Row, Col } from "antd";
+import { Row, Col } from "antd";
 import Store from "./store";
 import { Provider } from "mobx-react";
-
-const { TextArea } = Input;
+import TextareaLeft from "./textarea-left";
+import TextareaRight from "./textarea-right";
 
 export default class Demo extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {}
   render() {
     return (
       <Provider Store={Store}>
         <div id="demo" className="animated fadeIn">
-          <h2 className="title">这是一个使用Mobx进行跨组件双向绑定的简单示例：</h2>
+          <h2 className="title">这是一个使用&nbsp;<b>Mobx5</b>&nbsp;进行跨组件双向绑定的简单示例：</h2>
           <Row gutter={25}>
             <Col span={12}>
-              <TextArea rows={39} />
+              <TextareaLeft />
             </Col>
             <Col span={12}>
-              <TextArea rows={39} />
+              <TextareaRight />
             </Col>
           </Row>
         </div>
