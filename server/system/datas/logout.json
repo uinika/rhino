@@ -1,7 +1,7 @@
 {
   "head": {
     "status": "SUCCESS",
-    "message": "Logout operation succeeds !",
+    "message": "您好，已经成功退出系统，Rhino欢迎您再次访问 !",
     "total": 0
   },
   "body": {}

@@ -34,7 +34,7 @@ const devServerConfig = {
 gulp.task("default", () => {
   nodemon({
     script: "./server/app.js",
-    watch: ["./server/*.js"],
+    watch: ["./server/**/*.js"],
   });
   var app = express();
   const compiler = webpack(develop);

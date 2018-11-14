@@ -10,9 +10,9 @@ export default Form.create()(
     handleLogin = event => {
       event.preventDefault();
       this.props.form.validateFields((error, values) => {
-        const username = values.username.trim();
-        const password = values.password.trim();
-        if (!error && username && password && !/\s/g.test(username) && !/\s/g.test(password)) {
+        const username = values.username;
+        const password = values.password;
+        if ((!error && username && password) && !/\s/g.test(username) && !/\s/g.test(password)) {
           Http.fetch({
             method: "POST",
             url: Http.url.master + "/system/login",

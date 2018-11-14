@@ -4,7 +4,7 @@ import React from "react";
 import Loading from "./common/components/loading";
 
 class Store {
-  /** 全司过渡动画 */
+  /** 全局过渡动画 */
   @observable
   loading = true;
 }

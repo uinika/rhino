@@ -1,8 +1,10 @@
 import React from "react";
 import "./style.scss";
-import Moment from "moment";
-import { storage } from "../common/utils/helper.js";
-import Http from "../common/utils/http";
+import { Input, Row, Col } from "antd";
+import Store from "./store";
+import { Provider } from "mobx-react";
+
+const { TextArea } = Input;
 
 export default class Demo extends React.Component {
   constructor(props) {
@@ -10,12 +12,21 @@ export default class Demo extends React.Component {
   }
 
   componentDidMount() {}
-
   render() {
     return (
-      <div id="demo" className="animated fadeIn">
-        <h1>DEMO</h1>
-      </div>
+      <Provider Store={Store}>
+        <div id="demo" className="animated fadeIn">
+          <h2 className="title">这是一个使用Mobx进行双向绑定的简单示例：</h2>
+          <Row gutter={25}>
+            <Col span={12}>
+              <TextArea rows={39} />
+            </Col>
+            <Col span={12}>
+              <TextArea rows={39} />
+            </Col>
+          </Row>
+        </div>
+      </Provider>
     );
   }
 }

@@ -1,7 +1,7 @@
 {
   "head": {
     "status": "SUCCESS",
-    "message": "Login operation succeeds !",
+    "message": "您好，您已经登陆成功了，Rhino欢迎您访问 !",
     "total": 0
   },
   "body": {}

@@ -1,10 +1,12 @@
 # Rhino
 
-本项目是一个基于 React16.6.3 完成的 boilerplate，整合了目前最新版的`react-router`路由和`mobx`状态管理，具体技术相关的资料可以参见笔者[Github Pages](https://uinika.github.io/)的如下两篇文章：
+本项目是一个基于 React16.6.3 完成的 boilerplate，整合了目前最新版的`react-router`路由和`mobx`状态管理，并通过`express`作为Web服务器生成模拟数据，具体技术相关的资料可以参见笔者[Github Pages](https://uinika.github.io/)撰写的如下三篇文章：
 
 [《React 16.6.x 全新全译》](https://uinika.github.io/web/broswer/react.html)
 
 [《Flux 数据流两三事儿》](https://uinika.github.io/web/broswer/flux.html/#Mobx)
+
+[《NodeJS 快速上手指南》](https://uinika.github.io/web/server/nodejs.html/#Express服务器)
 
 ![logo](sources/assets/rhino.png)
 
@@ -12,9 +14,10 @@
 
 ```bash
 ➜  cd rhino
+➜  npm install gulp-cli -g
 ➜  npm install
 ➜  gulp
-➜  Open browser with http://localhost:5001/dev/index.html
+➜  Open browser with http://localhost:5001/dev/index.html#/login
 ```
 
 ## 编译发布（Release & Build）
