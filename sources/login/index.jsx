@@ -24,10 +24,10 @@ export default Form.create()(
             <h1 className="logo">Rhino</h1>
             <Form className="form" onSubmit={this.handleLogin}>
               <FormItem>
-                <Input prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />} placeholder="Username" />
+                <Input size="large" prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />} placeholder="Username" />
               </FormItem>
               <FormItem>
-                <Input prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />} type="password" placeholder="Password" />
+                <Input size="large" prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />} type="password" placeholder="Password" />
               </FormItem>
               <FormItem>
                 <Button type="primary" htmlType="submit" className="button" />

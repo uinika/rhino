@@ -7,13 +7,14 @@
     height: 262px;
     .logo {
       color: white;
-      font-size: 30px;
-      margin: 25px 0 12px 55px;
+      font-size: 33px;
+      font-weight: bold;
+      margin: 23px 0 12px 55px;
     }
     .form {
-      margin: 0 160px 0 50px;
+      margin: 32px 160px 0 50px;
       .ant-form-item {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
       .button {
         position: absolute;
