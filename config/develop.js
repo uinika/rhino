@@ -25,7 +25,8 @@ module.exports = webpackMerge(common, {
     })
   ],
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: "url-loader",
         options: {

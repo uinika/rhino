@@ -1,22 +1,30 @@
 exports.lessDevelop = () => ({
-  use: [{
-    loader: "style-loader"
-  }, {
-    loader: "css-loader"
-  }, {
-    loader: "less-loader",
-    options: { javascriptEnabled: true }
-  }]
+  use: [
+    {
+      loader: "style-loader"
+    },
+    {
+      loader: "css-loader"
+    },
+    {
+      loader: "less-loader",
+      options: { javascriptEnabled: true }
+    }
+  ]
 });
 
 exports.scssDevelop = () => ({
-  use: [{
-    loader: "style-loader"
-  }, {
-    loader: "css-loader"
-  }, {
-    loader: "sass-loader"
-  }]
+  use: [
+    {
+      loader: "style-loader"
+    },
+    {
+      loader: "css-loader"
+    },
+    {
+      loader: "sass-loader"
+    }
+  ]
 });
 
 exports.lessProduct = () => {
@@ -26,7 +34,7 @@ exports.lessProduct = () => {
     ...config,
     fallback: "style-loader"
   };
-}
+};
 
 exports.scssProduct = () => {
   const config = this.scssDevelop();
@@ -35,4 +43,4 @@ exports.scssProduct = () => {
     ...config,
     fallback: "style-loader"
   };
-}
+};

@@ -7,17 +7,7 @@ module.exports = {
   context: path.resolve(__dirname, "../sources"),
   entry: {
     app: "./app.js",
-    vendor: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "antd",
-      "axios",
-      "jquery",
-      "lodash",
-      "moment",
-      "echarts"
-    ]
+    vendor: ["react", "react-dom", "react-router-dom", "antd", "axios", "jquery", "lodash", "moment", "echarts"]
   },
   resolve: {
     extensions: [".js", ".jsx", ".json"]
@@ -29,7 +19,7 @@ module.exports = {
       filename: "index.html"
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+      names: ["vendor", "manifest"]
     }),
     new webpack.optimize.ModuleConcatenationPlugin()
   ],
