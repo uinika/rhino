@@ -7,7 +7,7 @@ const { TextArea } = Input;
 
 @inject("Store")
 @observer
-export default class DemoTextareaLeft extends React.PureComponent {
+export default class DemoTextareaLeft extends React.Component {
   constructor(props) {
     super(props);
   }
