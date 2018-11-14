@@ -11,7 +11,8 @@ export default Form.create()(
       event.preventDefault();
       this.props.form.validateFields((error, values) => {
         if (!error) {
-          this.props.history.push("layout/dashboard");
+          console.log(values);
+          // this.props.history.push("layout/dashboard");
         }
       });
     };
@@ -24,10 +25,14 @@ export default Form.create()(
             <h1 className="logo">Rhino</h1>
             <Form className="form" onSubmit={this.handleLogin}>
               <FormItem>
-                <Input size="large" prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />} placeholder="Username" />
+                {getFieldDecorator("username", {
+                  rules: [{ required: true, message: "请输入您的用户名！" }]
+                })(<Input size="large" prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />} placeholder="用户名" />)}
               </FormItem>
               <FormItem>
-                <Input size="large" prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />} type="password" placeholder="Password" />
+                {getFieldDecorator("password", {
+                  rules: [{ required: true, message: "请输入您的密码！" }]
+                })(<Input size="large" prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />} type="password" placeholder="密    码" />)}
               </FormItem>
               <FormItem>
                 <Button type="primary" htmlType="submit" className="button" />
