@@ -6,7 +6,7 @@
 
 [《Flux 数据流两三事儿》](https://uinika.github.io/web/broswer/flux.html/#Mobx)
 
-[《NodeJS 快速上手指南》](https://uinika.github.io/web/server/nodejs.html/#Express服务器)
+[《NodeJS 快速上手指南》](https://uinika.github.io/web/server/nodejs.html#Express服务器)
 
 ![logo](sources/assets/rhino.png)
 
