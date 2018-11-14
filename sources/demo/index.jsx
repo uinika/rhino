@@ -16,7 +16,7 @@ export default class Demo extends React.Component {
     return (
       <Provider Store={Store}>
         <div id="demo" className="animated fadeIn">
-          <h2 className="title">这是一个使用Mobx进行双向绑定的简单示例：</h2>
+          <h2 className="title">这是一个使用Mobx进行跨组件双向绑定的简单示例：</h2>
           <Row gutter={25}>
             <Col span={12}>
               <TextArea rows={39} />

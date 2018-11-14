@@ -1,6 +1,6 @@
 {
-  "indent_char": " ",
   "indent_size": 2,
+  "indent_char": " ",
   "brace_style": "collapse,preserve-inline",
   "beautify.ignore": "**/*.jsx"
 }

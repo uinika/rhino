@@ -1,7 +1,8 @@
 node_modules
 
+package-lock.json
+
 build
 
 release
 
-package-lock.json
